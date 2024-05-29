@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noche Estrellada con Cometas y Estrellas Fugaces</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Color del texto */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden; /* Ocultar estrellas que se salgan de la pantalla */
+        }
+        .star {
+            position: absolute;
+            width: 2px; /* Ancho de la estrella */
+            height: 2px; /* Altura de la estrella */
+            background-color: #fff; /* Color de la estrella */
+            border-radius: 50%; /* Forma de la estrella */
+            animation: twinkle 2s infinite; /* Animación de parpadeo */
+        }
+        @keyframes twinkle {
+            0% {opacity: 0;} /* Inicialmente invisible */
+            50% {opacity: 1;} /* Visible en la mitad de la animación */
+            100% {opacity: 0;} /* Vuelve a ser invisible al final */
+        }
+        .moon {
+            position: relative;
+            width: 100px; /* Ancho de la luna */
+            height: 100px; /* Altura de la luna */
+            background-color: #f4f4f4; /* Color de la luna */
+            border-radius: 50%; /* Forma de la luna */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Resplandor de la luna */
+        }
+        .moon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px; /* Ancho del reflejo de la luna */
+            height: 60px; /* Altura del reflejo de la luna */
+            background-color: #000; /* Color del reflejo de la luna */
+            border-radius: 50%; /* Forma del reflejo de la luna */
+            transform: translate(-50%, -50%);
+        }
+        .moon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px; /* Ancho del resplandor de la luna */
+            height: 80px; /* Altura del resplandor de la luna */
+            background-color: #f4f4f4; /* Color del resplandor de la luna */
+            border-radius: 50%; /* Forma del resplandor de la luna */
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Resplandor del resplandor de la luna */
+        }
+        .comet {
+            position: absolute;
+            top: 30%;
+            left: -10%;
+            width: 10px; /* Ancho del cometa */
+            height: 2px; /* Altura del cometa */
+            background-color: #fff; /* Color del cometa */
+            animation: cometAnimation 5s linear infinite; /* Animación del cometa */
+        }
+        @keyframes cometAnimation {
+            0% {left: -10%; opacity: 1;}
+            100% {left: 110%; opacity: 0;}
+        }
+        .shooting-star {
+            position: absolute;
+            width: 1px; /* Ancho de la estrella fugaz */
+            height: 1px; /* Altura de la estrella fugaz */
+            background-color: #fff; /* Color de la estrella fugaz */
+            animation: shootingStarAnimation 1.5s linear infinite; /* Animación de la estrella fugaz */
+        }
+        @keyframes shootingStarAnimation {
+            0% {opacity: 1; transform: translate(0, 0);}
+            100% {opacity: 0; transform: translate(100vw, -100vh);}
+        }
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Estrellas -->
+    <div class="star" style="top: 10%; left: 20%;"></div>
+    <div class="star" style="top: 30%; left: 80%;"></div>
+    <div class="star" style="top: 50%; left: 50%;"></div>
+    <div class="star" style="top: 70%; left: 10%;"></div>
+    <div class="star" style="top: 90%; left: 90%;"></div>
+    <div class="star" style="top: 15%; left: 70%;"></div>
+    <div class="star" style="top: 40%; left: 30%;"></div>
+    <div class="star" style="top: 60%; left: 20%;"></div>
+    <div class="star" style="top: 80%; left: 80%;"></div>
+    <div class="star" style="top: 25%; left: 90%;"></div>
+    <div class="star" style="top: 35%; left: 45%;"></div>
+    <div class="star" style="top: 55%; left: 10%;"></div>
+    <div class="star" style="top: 75%; left: 75%;"></div>
+    <div class="star" style="top: 85%; left: 35%;"></div>
+    
+    <!-- Cometas -->
+    <div class="comet" style="top: 10%; left: -10%;"></div>
+    <div class="comet" style="top: 40%; left: -10%;"></div>
+    <div class="comet" style="top: 70%; left: -10%;"></div>
+    
+    <!-- Estrellas fugaces -->
+    <div class="shooting-star" style="top: 20%; left: 0;"></div>
+    <div class="shooting-star" style="top: 60%; left: 10%;"></div>
+    <div class="shooting-star" style="top: 80%; left: 30%;"></div>
+    
+    <!-- Luna -->
+    <div class="moon"></div>
+
+    <!-- Texto -->
+    <div class="text">Te quiero mucho mi Dairita <3</div>
+</body
