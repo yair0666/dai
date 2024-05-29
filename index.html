@@ -32,19 +32,19 @@
         }
         .moon {
             position: relative;
-            width: 100px; /* Ancho de la luna */
-            height: 100px; /* Altura de la luna */
+            width: 60px; /* Ancho de la luna */
+            height: 60px; /* Altura de la luna */
             background-color: #f4f4f4; /* Color de la luna */
             border-radius: 50%; /* Forma de la luna */
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Resplandor de la luna */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Resplandor de la luna */
         }
         .moon::before {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 60px; /* Ancho del reflejo de la luna */
-            height: 60px; /* Altura del reflejo de la luna */
+            width: 36px; /* Ancho del reflejo de la luna */
+            height: 36px; /* Altura del reflejo de la luna */
             background-color: #000; /* Color del reflejo de la luna */
             border-radius: 50%; /* Forma del reflejo de la luna */
             transform: translate(-50%, -50%);
@@ -54,12 +54,12 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 80px; /* Ancho del resplandor de la luna */
-            height: 80px; /* Altura del resplandor de la luna */
+            width: 48px; /* Ancho del resplandor de la luna */
+            height: 48px; /* Altura del resplandor de la luna */
             background-color: #f4f4f4; /* Color del resplandor de la luna */
             border-radius: 50%; /* Forma del resplandor de la luna */
             transform: translate(-50%, -50%);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Resplandor del resplandor de la luna */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Resplandor del resplandor de la luna */
         }
         .comet {
             position: absolute;
@@ -86,7 +86,7 @@
             100% {opacity: 0; transform: translate(100vw, -100vh);}
         }
         .text {
-            font-size: 24px;
+            font-size: 16px;
             font-weight: bold;
             margin-top: 20px;
         }
@@ -123,5 +123,6 @@
     <div class="moon"></div>
 
     <!-- Texto -->
-    <div class="text">Te quiero mucho mi Dairita <3</div>
-</body
+    <div class="text">Te quiero mucho mi Dairita, échale ganillas y ten linda noche</div>
+</body>
+</html>
